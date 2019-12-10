@@ -23,21 +23,22 @@ $("document").ready(function() { //this helps your jQuery to work. Write all of 
         if((lowerCaseUserChoice==="rock" && computerResult==="Rock") || (lowerCaseUserChoice==="paper" && computerResult==="Paper") || (lowerCaseUserChoice==="scissors" && computerResult==="Scissors")){
             $("#result").text("You Tie!");
             $("#input").val("");
-            $("#history").append("You Tied!");
+            $("#history").append("<li>" + "You Tied!" + "</li>");
         } else if((lowerCaseUserChoice==="rock" && computerResult==="Paper") || (lowerCaseUserChoice==="paper" && computerResult==="Scissors") || (lowerCaseUserChoice==="scissors" && computerResult==="Rock")) {
             $("#result").text("You Lose!");
             $("#input").val("");
-            $("#history").append("You Lost!");
+            $("#history").append("<li>" + "You Lost!" + "</li>");
         } else if((lowerCaseUserChoice==="paper" && computerResult==="Rock") || (lowerCaseUserChoice==="scissors" && computerResult==="Paper") || (lowerCaseUserChoice==="rock" && computerResult==="Scissors")) {
             $("#result").text("You Win!");
             $("#input").val("");
-            $("#history").append("You Won!");
+            $("#history").append("<li>" + "You Won!" + "</li>");
         } else {
             alert("Please type in a valid answer.");
             $("#computerChoice").text(" ");
             $("#userChoice").text(" ");
+            $("#result").text(" ");
             $("#input").val("");
-            $("#history").append("Error");
+            $("#history").append("<li>" + "Error" + "</li>");
         }
     });
 });
