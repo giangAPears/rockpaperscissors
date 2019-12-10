@@ -2,7 +2,6 @@
 //******************TEST EARLY AND OFTEN USING console.log() ******************
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
 $("document").ready(function() { //this helps your jQuery to work. Write all of your JS code in this function.
-    alert("hello world");
     //GLOBAL VARIABLES
     /* global $ */
     $("#shoot").click(function() {
@@ -32,6 +31,7 @@ $("document").ready(function() { //this helps your jQuery to work. Write all of 
             $("#input").val("");
         } else {
             alert("Please type in a valid answer.");
+            $(#computerChoice).text(" ");
             $("#input").val("");
         }
     });
