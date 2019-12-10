@@ -10,20 +10,18 @@ $("document").ready(function() { //this helps your jQuery to work. Write all of 
         let userInput = $("#input").val(); 
         //makes input lower case so if else statement is easier to write
         let lowerCaseUserChoice = userInput.toLowerCase();
-        let userFirstLetter = lowerCaseUserChoice[0];
-        let userFirstLetterCapital = userFirstLetter.toUpperCase();
-        let userEndOfWord = lowerCaseUserChoice.slice(0);
-        let userEndLetters = userEndOfWord[1];
-        let newUserChoice = userFirstLetterCapital + userEndLetters;
-        console.log(newUserChoice);
-        $("#userChoice").text(lowerCaseUserChoice);
+        let upperCaseUserChoice = userInput.toUpperCase();
+
+        $("#userChoice").text(upperCaseUserChoice);
 
         let potentialResults = ["Rock", "Paper", "Scissors"]; 
         let randomNumber = Math.floor(Math.random() * 3);
         let computerResult = potentialResults[randomNumber];
-        $("#computerChoice").text(computerResult);
+        let lowerCaseComputerResult = computerResult.toLowerCase();
+        let upperCaseComputerResult = computerResult.toUpperCase();
+        $("#computerChoice").text(upperCaseComputerResult);
 
-        if(newUserChoice===computerResult){
+        if((lowerCaseUserChoice==="rock" && computerResult==="Rock") || (lowerCaseUserChoice==="paper" && computerResult==="Paper") || (lowerCaseUserChoice==="scissors" && computerResult==="Scissors")){
             $("#result").text("You Tie!");
             $("#input").val("");
         } else if((lowerCaseUserChoice==="rock" && computerResult==="Paper") || (lowerCaseUserChoice==="paper" && computerResult==="Scissors") || (lowerCaseUserChoice==="scissors" && computerResult==="Rock")) {
