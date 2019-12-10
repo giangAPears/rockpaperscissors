@@ -31,7 +31,8 @@ $("document").ready(function() { //this helps your jQuery to work. Write all of 
             $("#input").val("");
         } else {
             alert("Please type in a valid answer.");
-            $(#computerChoice).text(" ");
+            $("#computerChoice").text(" ");
+            $("#userChoice").text(" ");
             $("#input").val("");
         }
     });
